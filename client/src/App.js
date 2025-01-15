@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
@@ -9,15 +9,25 @@ function App() {
   const [isRoleVisible, setIsRoleVisible] = useState(false);
   const [isSecretVisible, setIsSecretVisible] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // Check for username in URL on component mount
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const urlUsername = params.get('username');
+    
+    if (urlUsername) {
+      setUsername(urlUsername);
+      fetchCharacter(urlUsername);
+    }
+  }, []);
+
+  const fetchCharacter = async (name) => {
     try {
       const response = await fetch('http://localhost:3001/api/roles/assign', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username }),
+        body: JSON.stringify({ username: name }),
       });
 
       const data = await response.json();
@@ -41,6 +51,16 @@ function App() {
     }
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Update URL with username
+    const url = new URL(window.location);
+    url.searchParams.set('username', username);
+    window.history.pushState({}, '', url);
+    
+    await fetchCharacter(username);
+  };
+
   return (
     <div className="App">
       <div className="spooky-container">
@@ -48,31 +68,31 @@ function App() {
         {
           !isRoleVisible && (
             <div className="assignment-form">
-          {!assignedCharacter ? (
-            <form onSubmit={handleSubmit}>
-              <input
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                placeholder="Enter your name..."
-                required
-                className="spooky-input"
-              />
-              <button type="submit" className="spooky-button">
-                Reveal Your Character
-              </button>
-            </form>
-          ) : (
-            <button 
-              onClick={() => setIsRoleVisible(true)} 
-              className="spooky-button"
-            >
-              {isExisting ? 
-                `"${username}" is already assigned. Click here to see your role again` : 
-                'Click to view your role again'}
-            </button>
-          )}
-        </div>
+              {!assignedCharacter ? (
+                <form onSubmit={handleSubmit}>
+                  <input
+                    type="text"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    placeholder="Enter your name..."
+                    required
+                    className="spooky-input"
+                  />
+                  <button type="submit" className="spooky-button">
+                    Reveal Your Character
+                  </button>
+                </form>
+              ) : (
+                <button 
+                  onClick={() => setIsRoleVisible(true)} 
+                  className="spooky-button"
+                >
+                  {isExisting ? 
+                    `"${username}" is already assigned. Click here to see your role again` : 
+                    'Click to view your role again'}
+                </button>
+              )}
+            </div>
           )
         }
 
@@ -94,7 +114,9 @@ function App() {
                 onClick={() => setIsSecretVisible(!isSecretVisible)}
               >
                 <h3>🤫 Your Secret Information</h3>
-                <span className={`arrow ${isSecretVisible ? 'open' : ''}`}>Click to {!isSecretVisible ? 'Show' : 'Hide'}</span>
+                <span className={`arrow ${isSecretVisible ? 'open' : ''}`}>
+                  Click to {!isSecretVisible ? 'Show' : 'Hide'}
+                </span>
               </div>
               <div className={`secret-content ${isSecretVisible ? 'visible' : ''}`}>
                 <p><span>Secrets:</span> {assignedCharacter.secrets}</p>
