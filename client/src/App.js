@@ -6,6 +6,8 @@ function App() {
   const [assignedCharacter, setAssignedCharacter] = useState(null);
   const [error, setError] = useState(null);
   const [isExisting, setIsExisting] = useState(false);
+  const [isRoleVisible, setIsRoleVisible] = useState(false);
+  const [isSecretVisible, setIsSecretVisible] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,6 +28,12 @@ function App() {
 
       setAssignedCharacter(data.character);
       setIsExisting(data.isExisting);
+
+      // Immediately show role if it's a new assignment
+      if (!data.isExisting) {
+        setIsRoleVisible(true);
+      }
+
       setError(null);
     } catch (err) {
       setError(err.message);
@@ -37,14 +45,16 @@ function App() {
     <div className="App">
       <div className="spooky-container">
         <h1 className="spooky-title">Welcome to Shadowmoor</h1>
-        <div className="assignment-form">
+        {
+          !isRoleVisible && (
+            <div className="assignment-form">
           {!assignedCharacter ? (
             <form onSubmit={handleSubmit}>
               <input
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                placeholder="Enter your username..."
+                placeholder="Enter your name..."
                 required
                 className="spooky-input"
               />
@@ -54,21 +64,23 @@ function App() {
             </form>
           ) : (
             <button 
-              onClick={handleSubmit} 
+              onClick={() => setIsRoleVisible(true)} 
               className="spooky-button"
             >
               {isExisting ? 
-                `${username} is already assigned. Click here to see your role again` : 
+                `"${username}" is already assigned. Click here to see your role again` : 
                 'Click to view your role again'}
             </button>
           )}
         </div>
+          )
+        }
 
         {error && <div className="error-message">{error}</div>}
         
-        {assignedCharacter && (
+        {assignedCharacter && isRoleVisible && (
           <div className="character-card">
-            <h2 className="character-title">Your Role in Tonight's Mystery</h2>
+            <h2 className="character-title">You are {assignedCharacter.name}</h2>
             <div className="character-info">
               <p><span>Name:</span> {assignedCharacter.name}</p>
               <p><span>Role:</span> {assignedCharacter.role}</p>
@@ -77,8 +89,14 @@ function App() {
               <p><span>Relationships:</span> {assignedCharacter.relationships}</p>
             </div>
             <div className="secret-scroll">
-              <h3>🤫 Secret Information</h3>
-              <div className="secret-content">
+              <div 
+                className="secret-header" 
+                onClick={() => setIsSecretVisible(!isSecretVisible)}
+              >
+                <h3>🤫 Your Secret Information</h3>
+                <span className={`arrow ${isSecretVisible ? 'open' : ''}`}>Click to {!isSecretVisible ? 'Show' : 'Hide'}</span>
+              </div>
+              <div className={`secret-content ${isSecretVisible ? 'visible' : ''}`}>
                 <p><span>Secrets:</span> {assignedCharacter.secrets}</p>
                 <p><span>Clues:</span> {assignedCharacter.clues}</p>
               </div>

@@ -1,6 +1,9 @@
 .App {
   min-height: 100vh;
-  background-color: #1a1a1a;
+  background-image: url('./dark-forest.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #e0e0e0;
   font-family: 'Crimson Text', serif;
 }
@@ -9,6 +12,9 @@
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
+  background-color: #1a1a1af6;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
 }
 
 .spooky-title {
@@ -102,6 +108,37 @@
 .secret-content span {
   color: #c41e3a;
   font-weight: bold;
+}
+
+.secret-content p {
+  margin: 0.8rem 0;
+}
+
+.secret-content span {
+  color: #c41e3a;
+  font-weight: bold;
+}
+
+.secret-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.secret-content.visible {
+  max-height: 500px; /* Adjust this value based on your content */
+}
+
+.secret-header {
+  cursor: pointer;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
 }
 
 /* Mobile Responsiveness */
