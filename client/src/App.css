@@ -1,0 +1,125 @@
+.App {
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  font-family: 'Crimson Text', serif;
+}
+
+.spooky-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.spooky-title {
+  font-size: 2.5rem;
+  color: #c41e3a;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.assignment-form form {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spooky-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #666;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.spooky-button {
+  padding: 12px 24px;
+  background-color: #c41e3a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.spooky-button:hover {
+  background-color: #8b0000;
+  transform: scale(1.05);
+}
+
+.error-message {
+  color: #ff4444;
+  margin: 1rem 0;
+  padding: 10px;
+  border: 1px solid #ff4444;
+  border-radius: 4px;
+}
+
+.character-card {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.character-title {
+  color: #c41e3a;
+  margin-bottom: 1.5rem;
+}
+
+.character-info p {
+  margin: 0.8rem 0;
+  line-height: 1.6;
+}
+
+.character-info span {
+  color: #c41e3a;
+  font-weight: bold;
+}
+
+.secret-scroll {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.secret-scroll h3 {
+  color: #c41e3a;
+  margin-bottom: 1rem;
+}
+
+.secret-content p {
+  margin: 0.8rem 0;
+}
+
+.secret-content span {
+  color: #c41e3a;
+  font-weight: bold;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .spooky-container {
+    padding: 15px;
+  }
+
+  .spooky-title {
+    font-size: 2rem;
+  }
+
+  .spooky-input,
+  .spooky-button {
+    width: 100%;
+  }
+
+  .character-card {
+    padding: 15px;
+  }
+}
