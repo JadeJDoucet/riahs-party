@@ -12,6 +12,9 @@ function App() {
   const [isExisting, setIsExisting] = useState(false);
   const [isRoleVisible, setIsRoleVisible] = useState(false);
   const [isSecretVisible, setIsSecretVisible] = useState(false);
+  const [cluePasscode, setCluePasscode] = useState('');
+  const [isClueVisible, setIsClueVisible] = useState(false);
+  const [clueError, setClueError] = useState('');
 
   // Check for username in URL on component mount
   useEffect(() => {
@@ -63,6 +66,36 @@ function App() {
     window.history.pushState({}, '', url);
     
     await fetchCharacter(username);
+  };
+
+  const verifyCluePasscode = async () => {
+    try {
+      const response = await fetch(`${API_URL}/api/roles/verify`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ 
+          username: username,
+          passcode: cluePasscode 
+        }),
+      });
+
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error);
+      }
+
+      setAssignedCharacter(prev => ({
+        ...prev,
+        clues: data.clue
+      }));
+      setIsClueVisible(true);
+      setClueError('');
+    } catch (err) {
+      setClueError(err.message);
+    }
   };
 
   return (
@@ -124,7 +157,27 @@ function App() {
               </div>
               <div className={`secret-content ${isSecretVisible ? 'visible' : ''}`}>
                 <p><span>Secrets:</span> {assignedCharacter.secrets}</p>
-                <p><span>Clues:</span> {assignedCharacter.clues}</p>
+                <div className="clue-section">
+                  <p><span>Clues:</span></p>
+                  {!isClueVisible ? (
+                    <div className="clue-verification">
+                      <input
+                        type="text"
+                        maxLength="4"
+                        value={cluePasscode}
+                        onChange={(e) => setCluePasscode(e.target.value)}
+                        placeholder="Enter 4-digit code"
+                        className="clue-input"
+                      />
+                      <button onClick={verifyCluePasscode} className="verify-button">
+                        Verify Code
+                      </button>
+                      {clueError && <p className="error-message">{clueError}</p>}
+                    </div>
+                  ) : (
+                    <p>{assignedCharacter.clues}</p>
+                  )}
+                </div>
               </div>
             </div>
           </div>

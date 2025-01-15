@@ -141,6 +141,40 @@
   transform: rotate(180deg);
 }
 
+.clue-section {
+  margin-top: 1rem;
+}
+
+.clue-verification {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.clue-input {
+  padding: 8px;
+  width: 120px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #666;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.verify-button {
+  padding: 8px 16px;
+  background-color: #c41e3a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.verify-button:hover {
+  background-color: #8b0000;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .spooky-container {

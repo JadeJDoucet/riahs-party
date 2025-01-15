@@ -1,3 +1,7 @@
+/* Generate a random 4-digit passcode for each character */
+UPDATE characters
+SET clue_passcode = LPAD(FLOOR(RANDOM() * 10000)::TEXT, 4, '0');
+
 INSERT INTO characters (name, role, backstory, objectives, secrets, relationships, clues) VALUES
 ('Marlowe the Devout', 'Cult Leader', 'High Priest(ess) of the Shadowmoor cult, dedicated to maintaining the rituals that keep the Eldritch Whisperer at bay.', 'Maintain order and ensure the ritual proceeds.', 'Suspects the Sacrifice had doubts about the ritual.', 'Leader of the cult, connected to all cult members.', 'Knows about the Sacrifice''s wavering commitment to the ritual.'),
 

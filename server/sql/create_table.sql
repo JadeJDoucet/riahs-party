@@ -7,6 +7,7 @@ CREATE TABLE characters (
     secrets TEXT,
     relationships TEXT,
     clues TEXT,
+    clue_passcode VARCHAR(4),
     assignee VARCHAR(100) DEFAULT NULL,
     CONSTRAINT unique_assignee UNIQUE (assignee)
 );
