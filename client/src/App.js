@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
+const API_URL = process.env.NODE_ENV === 'production' 
+  ? window.location.origin
+  : 'http://localhost:3001';
+
 function App() {
   const [username, setUsername] = useState('');
   const [assignedCharacter, setAssignedCharacter] = useState(null);
@@ -22,7 +26,7 @@ function App() {
 
   const fetchCharacter = async (name) => {
     try {
-      const response = await fetch('http://localhost:3001/api/roles/assign', {
+      const response = await fetch(`${API_URL}/api/roles/assign`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
