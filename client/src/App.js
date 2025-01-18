@@ -89,7 +89,7 @@ function App() {
 
       setAssignedCharacter(prev => ({
         ...prev,
-        clues: data.clue
+        clue: data.clue
       }));
       setIsClueVisible(true);
       setClueError('');
@@ -140,9 +140,8 @@ function App() {
             <h2 className="character-title">You are {assignedCharacter.name}</h2>
             <div className="character-info">
               <p><span>Name:</span> {assignedCharacter.name}</p>
-              <p><span>Role:</span> {assignedCharacter.role}</p>
+              <p><span>Title:</span> {assignedCharacter.title}</p>
               <p><span>Backstory:</span> {assignedCharacter.backstory}</p>
-              <p><span>Objectives:</span> {assignedCharacter.objectives}</p>
               <p><span>Relationships:</span> {assignedCharacter.relationships}</p>
             </div>
             <div className="secret-scroll">
@@ -156,7 +155,9 @@ function App() {
                 </span>
               </div>
               <div className={`secret-content ${isSecretVisible ? 'visible' : ''}`}>
-                <p><span>Secrets:</span> {assignedCharacter.secrets}</p>
+                <p><span>Role:</span> {assignedCharacter.role}</p>
+                <p><span>Objective(s):</span> {assignedCharacter.objective}</p>
+                <p><span>Secret(s):</span> {assignedCharacter.secret}</p>
                 <div className="clue-section">
                   <p><span>Clues:</span></p>
                   {!isClueVisible ? (
@@ -175,7 +176,7 @@ function App() {
                       {clueError && <p className="error-message">{clueError}</p>}
                     </div>
                   ) : (
-                    <p>{assignedCharacter.clues}</p>
+                    <p>{assignedCharacter.clue}</p>
                   )}
                 </div>
               </div>

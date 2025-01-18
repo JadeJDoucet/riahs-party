@@ -48,7 +48,7 @@ router.post('/assign', async (req, res) => {
     res.json({ 
       character: {
         ...result.rows[0],
-        clues: null  // Hide clues initially
+        clue: null  // Hide clues initially
       },
       isExisting: false
     });
@@ -69,7 +69,7 @@ router.post('/verify', async (req, res) => {
   try {
     // Get character by username and verify passcode
     const result = await client.query(
-      'SELECT clues FROM characters WHERE assignee = $1 AND clue_passcode = $2',
+      'SELECT clue FROM characters WHERE assignee = $1 AND clue_passcode = $2',
       [username, passcode]
     );
     
@@ -77,7 +77,7 @@ router.post('/verify', async (req, res) => {
       return res.status(400).json({ error: 'Invalid passcode' });
     }
     
-    res.json({ clue: result.rows[0].clues });
+    res.json({ clue: result.rows[0].clue });
     
   } catch (error) {
     console.error('Error:', error);

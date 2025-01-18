@@ -1,148 +1,174 @@
 {
     "characters": [
-    {
-    "name": "Marlowe the Devout",
-    "role": "Cult Leader",
-    "backstory": "High Priest(ess) of the Shadowmoor cult, dedicated to maintaining the rituals that keep the Eldritch Whisperer at bay.",
-    "objectives": "Maintain order and ensure the ritual proceeds.",
-    "secrets": "Suspects the Sacrifice had doubts about the ritual.",
-    "relationships": "Leader of the cult, connected to all cult members.",
-    "clues": "Knows about the Sacrifice's wavering commitment to the ritual."
-    },
-    {
-    "name": "Thalia the Ambitious",
-    "role": "Cultist",
-    "backstory": "An eager acolyte determined to rise within the cult ranks.",
-    "objectives": "Rise in rank by finding the murderer.",
-    "secrets": "Had a secret meeting with the Sacrifice before their death.",
-    "relationships": "Acolyte to Marlowe, has ambitions that others might find suspicious.",
-    "clues": "A note found in the Sacrifice's belongings hints at a meeting with Thalia."
-    },
-    {
-    "name": "Garrick the Protector",
-    "role": "Cultist",
-    "backstory": "The enforcer of the cult, tasked with keeping peace and order.",
-    "objectives": "Protect the cult's secrets and maintain peace.",
-    "secrets": "Had a dispute with the Sacrifice over the ritual.",
-    "relationships": "Close to Marlowe, wary of Thalia's ambitions.",
-    "clues": "Witnessed arguing with the Sacrifice about the ritual."
-    },
-    {
-    "name": "Elara the Visionary",
-    "role": "Cultist",
-    "backstory": "A seer with the ability to interpret visions of the future.",
-    "objectives": "Interpret visions to prevent the Whisperer’s awakening.",
-    "secrets": "Foretold a death but kept it secret.",
-    "relationships": "Confidant to Marlowe, mistrustful of outsiders.",
-    "clues": "Had a vision of a death but did not reveal it."
-    },
-    {
-    "name": "Bram the Knowledgeable",
-    "role": "Villager",
-    "backstory": "The village librarian, deeply familiar with ancient texts.",
-    "objectives": "Discover an alternate ritual to prevent the Whisperer’s rise.",
-    "secrets": "Found ancient texts suggesting a fairy’s involvement.",
-    "relationships": "Respected by villagers, has a hidden alliance with Elara.",
-    "clues": "Knows about texts implicating a fairy in the ritual."
-    },
-    {
-    "name": "Lila the Stranger",
-    "role": "Villager",
-    "backstory": "An outsider who recently arrived in Shadowmoor, seeking to uncover its secrets.",
-    "objectives": "Uncover the village’s secrets for personal gain.",
-    "secrets": "Knows the Sacrifice wanted to leave the village.",
-    "relationships": "Seen as an intruder by cultists, befriended by Bram.",
-    "clues": "Overheard Sacrifice expressing doubts about the ritual."
-    },
-    {
-    "name": "Finn the Inventive",
-    "role": "Villager",
-    "backstory": "The village alchemist, skilled in creating potions and concoctions.",
-    "objectives": "Determine the poison used in the murder.",
-    "secrets": "Found traces of poison in the Sacrifice’s belongings.",
-    "relationships": "Works closely with Rowan, has a professional rivalry with Bram.",
-    "clues": "Analyzed the poison used in the Sacrifice's death."
-    },
-    {
-    "name": "Rowan the Tracker",
-    "role": "Villager",
-    "backstory": "A skilled hunter, familiar with the movements of creatures in the forest.",
-    "objectives": "Uncover unusual forest movements.",
-    "secrets": "Saw a fairy near the village before the murder.",
-    "relationships": "Allied with Finn, suspicious of forest fairies.",
-    "clues": "Tracked movements of a fairy near the village."
-    },
-    {
-    "name": "Hugo the Strong",
-    "role": "Villager",
-    "backstory": "The village blacksmith, known for his strength and reliability.",
-    "objectives": "Protect the village and find the murderer.",
-    "secrets": "Had a heated argument with the Sacrifice the night before.",
-    "relationships": "Respected by villagers, seen as a protector.",
-    "clues": "Seen arguing with the Sacrifice over village matters."
-    },
-    {
-    "name": "Evelyn the Phantom",
-    "role": "Supernatural",
-    "backstory": "A ghost that haunts the village, delivering cryptic warnings.",
-    "objectives": "Deliver cryptic warnings and aid in finding the murderer.",
-    "secrets": "Knows the Sacrifice’s true fears.",
-    "relationships": "Feared by some villagers, a guide to others.",
-    "clues": "Speaks in riddles about the Sacrifice's last moments."
-    },
-    {
-    "name": "Celine the Creative",
-    "role": "Villager",
-    "backstory": "An artist who draws inspiration from the mystical forest.",
-    "objectives": "Distract and entertain while uncovering clues.",
-    "secrets": "Painted a scene that hints at the murderer’s identity.",
-    "relationships": "Friend to many villagers, inspires curiosity and wonder.",
-    "clues": "Artwork depicts a scene that reveals clues about the murder."
-    },
-    {
-    "name": "Alaric the Wise",
-    "role": "Villager",
-    "backstory": "The village elder, revered for his wisdom and guidance.",
-    "objectives": "Guide the villagers and uncover the truth.",
-    "secrets": "Knows about the Sacrifice’s doubts regarding the ritual.",
-    "relationships": "Trusted advisor to many, including Marlowe.",
-    "clues": "Aware of Sacrifice's hesitation about the ritual."
-    },
-    {
-    "name": "Myra the Mystic",
-    "role": "Cultist",
-    "backstory": "A runemaster with knowledge of ancient symbols and their power.",
-    "objectives": "Decipher runes to guide the ritual.",
-    "secrets": "Suspects the runes were tampered with.",
-    "relationships": "Respected by Marlowe, distrusted by outsiders.",
-    "clues": "Runes suggest tampering that implicates a villager."
-    },
-    {
-    "name": "Silas the Elusive",
-    "role": "Villager",
-    "backstory": "A mysterious figure who knows more than he lets on.",
-    "objectives": "Manipulate others using secrets.",
-    "secrets": "Knows the last person who saw the Sacrifice alive.",
-    "relationships": "Keeps his distance, but has key information.",
-    "clues": "Witnessed Sacrifice's final moments with Thalia."
-    },
-    {
-    "name": "Sylvara the Whisperer",
-    "role": "Supernatural",
-    "backstory": "A forest fairy dedicated to protecting the ancient woods.",
-    "objectives": "Protect the forest and aid in uncovering the truth.",
-    "secrets": "Knows the Whisperer’s true nature.",
-    "relationships": "Allied with Rowan, distrusted by some villagers.",
-    "clues": "Holds secrets about the forest's connection to the murder."
-    },
-    {
-    "name": "Lioren the Mischievous",
-    "role": "Supernatural",
-    "backstory": "A trickster fairy who enjoys causing chaos.",
-    "objectives": "Create chaos and enjoy the mystery.",
-    "secrets": "Knows the murderer but enjoys the game.",
-    "relationships": "Enjoys playing with both villagers and cultists.",
-    "clues": "Provides misleading clues for fun but knows the truth."
-    }
+      {
+        "name": "Marlowe Darkweave",
+        "title": "Village Leader",
+        "role": "Cult Leader",
+        "backstory": "A respected leader who has guided the village through many difficult winters. Marlowe is seen as a protector of the village's traditions.",
+        "objective": "Maintain order and find the murderer. Identify a new sacrifice and get the cult to agree on them.",
+        "secret": "Suspects the Sacrifice had doubts about the ritual.",
+        "relationships": "Trusted by most villagers, but wary of Thalia's ambition and Elara's visions. Knows Thalia is a cult member.",
+        "clue": "A document revealing the Sacrifice's wavering commitment to the ritual. The ritual book shows signs of recent tampering, with markings on the pages about poison-based sacrifices.",
+        "clue_rank": 5,
+        "optional": false,
+        "is_cultist": true
+      },
+      {
+        "name": "Thalia Nightshade",
+        "title": "Herbalist",
+        "role": "Cult Acolyte",
+        "backstory": "A young and ambitious herbalist eager to prove themselves. They believe the end justifies the means.",
+        "objective": "Rise in rank by finding the murderer. Secretly, advance the cult's agenda by finding a new sacrifice.",
+        "secret": "Recently acquired rare poisonous herbs from Finn under the pretense of studying ritual preparations. Knows Marlowe is a cult member.",
+        "relationships": "Mentored by Marlowe, but has a rivalry with Garrick and is suspicious of Finn.",
+        "clue": "A note in the Sacrifice's belongings about a meeting with Thalia. The note reads: 'Thalia, I know what you've been planning. Meet me at the grove tonight, or I'll tell Marlowe everything.'",
+        "clue_rank": 9,
+        "optional": false,
+        "is_cultist": true
+      },
+      {
+        "name": "Garrick Ironbound",
+        "title": "Guard",
+        "role": "Cult Member",
+        "backstory": "A steadfast and loyal protector of the village, Garrick enforces the rules with an iron fist. Their dedication often leads to conflicts with those who question authority.",
+        "objective": "Find the murderer. Secretly, protect the cult's interests.",
+        "secret": "Had a dispute with the Sacrifice over the ritual. Knows Elara is a cult member.",
+        "relationships": "Close to Marlowe, but clashes with Thalia's ambitions and is wary of Lila.",
+        "clue": "Eyewitnesses saw Garrick arguing with the Thalia about the ritual.",
+        "clue_rank": 8,
+        "optional": false,
+        "is_cultist": true
+      },
+      {
+        "name": "Elara Sightseer",
+        "title": "Seer",
+        "role": "Cult Member",
+        "backstory": "Known for their mysterious visions, which have guided the village in the past. However, their recent visions have become more troubling and harder to interpret.",
+        "objective": "Identify the new sacrifice. Help cult members agree on a new sacrifice.",
+        "secret": "Foretold a death but kept it secret. Knows Garrick and Marlowe are cult members.",
+        "relationships": "Confidant to Marlowe, but fears the implications of their visions and avoids Celine.",
+        "clue": "Elara had a vision of a death but chose not to share it.",
+        "clue_rank": 4,
+        "optional": false,
+        "is_cultist": true
+      },
+      {
+        "name": "Bram Grimtome",
+        "title": "Librarian",
+        "role": "Elf Villager",
+        "backstory": "The village's librarian, Bram is deeply knowledgeable about ancient texts and rituals. They often provide advice to the cult but remain skeptical of some of their practices.",
+        "objective": "Find the murderer.",
+        "secret": "Is aware of cult members frequenting the forbidden section of the forest.",
+        "relationships": "Respected by villagers, allied with Elara, but distrustful of Finn's experiments.",
+        "clue": "Ancient texts hinting at fairy involvement in the ritual.",
+        "clue_rank": 2,
+        "optional": false,
+        "is_cultist": false
+      },
+      {
+        "name": "Lila Duskwander",
+        "title": "Village Outsider",
+        "role": "Forest Fairy",
+        "backstory": "Lila recently arrived in Shadowmoor, drawn by the mysterious happenings. They seek to uncover the village's secrets for their own gain.",
+        "objective": "Find the murderer. Identify the cult members to put a stop to the ritual.",
+        "secret": "Knows the Sacrifice wanted to leave the village.",
+        "relationships": "Befriended by Bram, viewed with suspicion by Garrick and Hugo.",
+        "clue": "Overheard the Sacrifice expressing doubts about the ritual.",
+        "clue_rank": 3,
+        "optional": false,
+        "is_cultist": false
+      },
+      {
+        "name": "Finn Brewbane",
+        "title": "Alchemist",
+        "role": "Elf Villager",
+        "backstory": "A skilled alchemist who supplies the village with potions and remedies. Finn is known for their curiosity and occasional reckless experiments.",
+        "objective": "Identify the murderer. Identify the cult members.",
+        "secret": "Recently taught Thalia about rare poisons, believing it was for ritual studies.",
+        "relationships": "Works closely with Rowan, has a professional rivalry with Bram, and is suspicious of Thalia.",
+        "clue": "The poison used is an obscure concoction that requires specialized knowledge, implicating someone with alchemical expertise. Records showing Thalia requested specific poisonous ingredients, matching those found in the victim.",
+        "clue_rank": 9,
+        "optional": false,
+        "is_cultist": false
+      },
+      {
+        "name": "Rowan Shadowtracker",
+        "title": "Hunter",
+        "role": "Elf Villager",
+        "backstory": "A skilled hunter who knows the forest better than anyone. Rowan is often the first to notice any unusual occurrences in the woods.",
+        "objective": "Uncover unusual forest movements.",
+        "secret": "Saw a fairy near the village before the murder.",
+        "relationships": "Allied with Finn, protective of Sylvara, and wary of outsiders like Lila.",
+        "clue": "Tracked movements of a fairy near the village.",
+        "clue_rank": 1,
+        "optional": false,
+        "is_cultist": false
+      },
+      {
+        "name": "Hugo Steelwhisper",
+        "title": "Blacksmith",
+        "role": "Elf Villager",
+        "backstory": "A strong and reliable blacksmith, Hugo takes pride in their work and their role in protecting the village. They are respected for their strength and reliability.",
+        "objective": "Protect the village and find the murderer.",
+        "secret": "Believes the Sacrifice was murdered by the forest fairies.",
+        "relationships": "Respected by villagers, has a protective streak towards Celine, and distrusts Lila.",
+        "clue": "Witnessed Lila having a heated argument with the Sacrifice over village matters.",
+        "clue_rank": 7,
+        "optional": false,
+        "is_cultist": false
+      },
+      {
+        "name": "Silas Nightweaver",
+        "title": "Traveler",
+        "role": "Elf Villager",
+        "backstory": "Silas is a mysterious figure who knows more than they let on. Their past is shrouded in secrecy, and they take delight in a good mystery.",
+        "objective": "Convince the villagers that the sacrifice was murdered by the forest fairies (Lila).",
+        "secret": "Knows the last person who saw the Sacrifice alive. Has their own secret agenda.",
+        "relationships": "Keeps their distance, but has key information that connects them to Thalia and Lila.",
+        "clue": "Witnessed the Sacrifice's final moments with Thalia and possibly another.",
+        "clue_rank": 10,
+        "optional": false,
+        "is_cultist": false
+      },
+      {
+        "name": "Celine Moonshadow",
+        "title": "Artist",
+        "role": "Elf Villager",
+        "backstory": "An artist who draws inspiration from the mystical forest, Celine's works often contain hidden messages and symbols.",
+        "objective": "Distract and entertain while uncovering clues.",
+        "secret": "Painted a scene that hints at the murderer's identity.",
+        "relationships": "Friend to many villagers, inspires curiosity and wonder, and is often consulted by Bram for artistic interpretations.",
+        "clue": "Artwork depicting a scene that reveals clues about the murder.",
+        "clue_rank": 6,
+        "optional": false,
+        "is_cultist": false
+      },
+      {
+        "name": "Alaric Elderwhisper",
+        "title": "Village Elder",
+        "role": "Elf Villager",
+        "backstory": "The village elder, Alaric has seen many seasons and holds the collective memory of the village. Their wisdom is sought in times of crisis.",
+        "objective": "Guide the villagers and uncover the truth about the murderer.",
+        "secret": "Knows about the Sacrifice's doubts regarding the ritual.",
+        "relationships": "Trusted advisor to Marlowe, and a mentor to Bram and Rowan.",
+        "clue": "Knows that the sacrifice did not want to be the sacrifice, which would ruin the ritual because it must be done willingly.",
+        "clue_rank": 4,
+        "optional": false,
+        "is_cultist": false
+      },
+
+      {
+        "name": "Sylvara Wildbloom",
+        "title": "Forest Groundskeeper",
+        "role": "Forest Fairy",
+        "backstory": "A guardian of the forest, Sylvara seeks to maintain the balance between nature and the village. She is wary of the cult's actions.",
+        "objective": "Protect the forest and aid in uncovering the truth.",
+        "secret": "Knows the Whisperer's true nature. Knows the cult is trying to awaken the Whisperer.",
+        "relationships": "Protective of Rowan, cautious of Marlowe, and intrigued by Bram's knowledge.",
+        "clue": "Holds secrets about the forest's connection to the murder. Knows that a cult member is responsible for the murder.",
+        "clue_rank": 8,
+        "optional": true,
+        "is_cultist": false
+      }
     ]
-    }
+  }
